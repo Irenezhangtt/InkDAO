@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/memeDAO/static/css/main.0b63f1e3.css",
+    "main.js": "/memeDAO/static/js/main.b7b25255.js",
+    "index.html": "/memeDAO/index.html",
+    "main.0b63f1e3.css.map": "/memeDAO/static/css/main.0b63f1e3.css.map",
+    "main.b7b25255.js.map": "/memeDAO/static/js/main.b7b25255.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0b63f1e3.css",
+    "static/js/main.b7b25255.js"
+  ]
+}
