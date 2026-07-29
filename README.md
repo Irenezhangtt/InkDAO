@@ -8,13 +8,26 @@ InkDAO is a full-stack FinTech and Web3 application that turns publishing into
 a transparent community market. Writers submit work, readers curate with NVT,
 and DAO governance coordinates prize pools and Treasury execution on Ethereum.
 
-[![Live App](https://img.shields.io/badge/Live_App-Launch-171816?style=for-the-badge)](https://irenezhangtt.github.io/memeDAO/)
-[![Network](https://img.shields.io/badge/Network-Sepolia-5057D9?style=for-the-badge&logo=ethereum&logoColor=white)](https://sepolia.etherscan.io/)
-[![Solidity](https://img.shields.io/badge/Solidity-0.8.x-363636?style=for-the-badge&logo=solidity)](https://soliditylang.org/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=111111)](https://developer.mozilla.org/docs/Web/JavaScript)
-[![React](https://img.shields.io/badge/Frontend-React_18-20232A?style=for-the-badge&logo=react)](https://react.dev/)
-
 <br />
+
+<table>
+  <tr>
+    <td align="center" width="230">
+      <sub><b>EXPLORE THE PROTOCOL</b></sub><br /><br />
+      <a href="https://irenezhangtt.github.io/memeDAO/">
+        <img src="https://img.shields.io/badge/LAUNCH_INKDAO-OPEN_APP-171816?style=for-the-badge" alt="Launch InkDAO" />
+      </a>
+    </td>
+    <td align="center" width="510">
+      <sub><b>CORE TECHNOLOGY</b></sub><br /><br />
+      <a href="https://sepolia.etherscan.io/"><img src="https://img.shields.io/badge/Ethereum-Sepolia-5057D9?style=flat-square&logo=ethereum&logoColor=white" alt="Ethereum Sepolia" /></a>
+      <a href="https://soliditylang.org/"><img src="https://img.shields.io/badge/Solidity-0.8.x-363636?style=flat-square&logo=solidity" alt="Solidity 0.8.x" /></a>
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=111111" alt="JavaScript ES6+" /></a>
+      <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-18-20232A?style=flat-square&logo=react" alt="React 18" /></a>
+      <img src="https://img.shields.io/badge/ethers.js-6-2535A0?style=flat-square" alt="ethers.js 6" />
+    </td>
+  </tr>
+</table>
 
 <table>
   <tr>
