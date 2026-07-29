@@ -1,0 +1,138 @@
+<svg width="1440" height="820" viewBox="0 0 1440 820" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1440" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#11131A"/>
+      <stop offset="1" stop-color="#1B1E2A"/>
+    </linearGradient>
+    <linearGradient id="indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#6E73FF"/>
+      <stop offset="1" stop-color="#474ED2"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#DEFF62"/>
+      <stop offset="1" stop-color="#A9D62F"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity=".25"/>
+    </filter>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#8589FF"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#CFF34E"/>
+    </marker>
+    <marker id="arrowMuted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#73798C"/>
+    </marker>
+  </defs>
+
+  <rect width="1440" height="820" rx="28" fill="url(#bg)"/>
+  <path d="M0 117H1440" stroke="#2C3040"/>
+  <path d="M1010 0V820" stroke="#242837"/>
+  <circle cx="1330" cy="100" r="180" fill="#5057D9" fill-opacity=".06"/>
+  <circle cx="90" cy="760" r="220" fill="#D7FF3F" fill-opacity=".035"/>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="64" y="58" fill="#F5F2E9" font-size="26" font-weight="700">InkDAO protocol architecture</text>
+    <text x="64" y="88" fill="#8F95A8" font-size="14">Governance, capital, identity, and application logic — separated by design.</text>
+    <g transform="translate(1085 44)">
+      <circle cx="8" cy="8" r="6" fill="#8589FF"/>
+      <text x="24" y="13" fill="#A8ADBC" font-size="12">governance flow</text>
+      <circle cx="151" cy="8" r="6" fill="#CFF34E"/>
+      <text x="167" y="13" fill="#A8ADBC" font-size="12">capital flow</text>
+    </g>
+
+    <!-- Community -->
+    <g filter="url(#shadow)">
+      <rect x="510" y="154" width="420" height="102" rx="16" fill="#F4F1E8"/>
+      <rect x="510" y="154" width="7" height="102" rx="3.5" fill="#CFF34E"/>
+    </g>
+    <circle cx="563" cy="205" r="22" fill="#171923"/>
+    <path d="M552 207C552 199 557 194 563 194C569 194 574 199 574 207M547 218C550 211 556 208 563 208C570 208 576 211 579 218" stroke="#CFF34E" stroke-width="2" stroke-linecap="round"/>
+    <text x="604" y="197" fill="#171923" font-size="13" font-weight="700" letter-spacing="1.6">COMMUNITY LAYER</text>
+    <text x="604" y="224" fill="#171923" font-size="20" font-weight="700">Readers · Writers · Token holders</text>
+
+    <!-- Governance -->
+    <g filter="url(#shadow)">
+      <rect x="160" y="348" width="350" height="144" rx="18" fill="url(#indigo)"/>
+    </g>
+    <rect x="188" y="374" width="42" height="42" rx="11" fill="#FFFFFF" fill-opacity=".12"/>
+    <path d="M199 403H219M202 397V388H216V397M205 388V383H213V388" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <text x="248" y="386" fill="#D9DBFF" font-size="12" font-weight="700" letter-spacing="1.4">GOVERNANCE</text>
+    <text x="188" y="446" fill="white" font-size="25" font-weight="700">Governor.sol</text>
+    <text x="188" y="472" fill="#E5E6FF" font-size="14">Propose · Vote · Execute</text>
+
+    <!-- Contest -->
+    <g filter="url(#shadow)">
+      <rect x="930" y="348" width="350" height="144" rx="18" fill="#292D3C" stroke="#484E63"/>
+    </g>
+    <rect x="958" y="374" width="42" height="42" rx="11" fill="#CFF34E" fill-opacity=".13"/>
+    <path d="M968 399L976 407L992 388" stroke="#CFF34E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1018" y="386" fill="#8F95A8" font-size="12" font-weight="700" letter-spacing="1.4">APPLICATION</text>
+    <text x="958" y="446" fill="#F4F1E8" font-size="25" font-weight="700">ContestManager.sol</text>
+    <text x="958" y="472" fill="#A8ADBC" font-size="14">Submit · Curate · Finalize Top 3</text>
+
+    <!-- Treasury -->
+    <g filter="url(#shadow)">
+      <rect x="545" y="342" width="350" height="156" rx="18" fill="#F4F1E8"/>
+      <rect x="545" y="342" width="350" height="7" rx="3.5" fill="url(#green)"/>
+    </g>
+    <rect x="573" y="374" width="42" height="42" rx="11" fill="#171923"/>
+    <circle cx="594" cy="395" r="11" stroke="#CFF34E" stroke-width="2"/>
+    <path d="M589 395H599M594 390V400" stroke="#CFF34E" stroke-width="2" stroke-linecap="round"/>
+    <text x="633" y="386" fill="#676B79" font-size="12" font-weight="700" letter-spacing="1.4">FINANCIAL CORE</text>
+    <text x="573" y="449" fill="#171923" font-size="25" font-weight="700">Treasury.sol</text>
+    <text x="573" y="476" fill="#676B79" font-size="14">Payments · Prize pools · Rewards</text>
+
+    <!-- Flow lines top -->
+    <path d="M615 256C520 285 410 294 346 340" stroke="#8589FF" stroke-width="2.5" marker-end="url(#arrowPurple)"/>
+    <path d="M720 256V328" stroke="#CFF34E" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+    <path d="M825 256C920 285 1030 294 1094 340" stroke="#8589FF" stroke-width="2.5" marker-end="url(#arrowPurple)"/>
+    <path d="M510 420H531" stroke="#8589FF" stroke-width="2.5" marker-end="url(#arrowPurple)"/>
+    <path d="M930 420H909" stroke="#CFF34E" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+
+    <!-- Core modules -->
+    <text x="64" y="574" fill="#8F95A8" font-size="12" font-weight="700" letter-spacing="1.6">CORE PROTOCOL MODULES</text>
+    <g>
+      <rect x="64" y="600" width="294" height="132" rx="16" fill="#222634" stroke="#3A4053"/>
+      <circle cx="96" cy="633" r="10" fill="#8589FF"/>
+      <text x="118" y="638" fill="#F4F1E8" font-size="17" font-weight="700">NovelToken.sol</text>
+      <text x="88" y="678" fill="#8F95A8" font-size="13">NVT participation token</text>
+      <rect x="88" y="696" width="78" height="22" rx="11" fill="#8589FF" fill-opacity=".14"/>
+      <text x="104" y="711" fill="#B9BCFF" font-size="10" font-weight="700">ERC-20</text>
+    </g>
+    <g>
+      <rect x="374" y="600" width="294" height="132" rx="16" fill="#222634" stroke="#3A4053"/>
+      <circle cx="406" cy="633" r="10" fill="#CFF34E"/>
+      <text x="428" y="638" fill="#F4F1E8" font-size="17" font-weight="700">Membership.sol</text>
+      <text x="398" y="678" fill="#8F95A8" font-size="13">Paid access registry</text>
+      <rect x="398" y="696" width="96" height="22" rx="11" fill="#CFF34E" fill-opacity=".12"/>
+      <text x="413" y="711" fill="#CFF34E" font-size="10" font-weight="700">ONBOARDING</text>
+    </g>
+    <g>
+      <rect x="684" y="600" width="294" height="132" rx="16" fill="#222634" stroke="#3A4053"/>
+      <circle cx="716" cy="633" r="10" fill="#FF8069"/>
+      <text x="738" y="638" fill="#F4F1E8" font-size="17" font-weight="700">RoleManager.sol</text>
+      <text x="708" y="678" fill="#8F95A8" font-size="13">Reader · Author · Admin</text>
+      <rect x="708" y="696" width="94" height="22" rx="11" fill="#FF8069" fill-opacity=".12"/>
+      <text x="725" y="711" fill="#FF9B89" font-size="10" font-weight="700">IDENTITY</text>
+    </g>
+    <g>
+      <rect x="994" y="600" width="382" height="132" rx="16" fill="#222634" stroke="#3A4053"/>
+      <circle cx="1026" cy="633" r="10" fill="#68C6FF"/>
+      <text x="1048" y="638" fill="#F4F1E8" font-size="17" font-weight="700">External infrastructure</text>
+      <text x="1018" y="678" fill="#8F95A8" font-size="13">Chainlink price data · Aave research</text>
+      <rect x="1018" y="696" width="100" height="22" rx="11" fill="#68C6FF" fill-opacity=".12"/>
+      <text x="1034" y="711" fill="#8FD5FF" font-size="10" font-weight="700">OPTIONAL</text>
+    </g>
+
+    <!-- Flow lines bottom -->
+    <path d="M635 498C560 545 300 548 211 588" stroke="#CFF34E" stroke-width="2" marker-end="url(#arrowGreen)"/>
+    <path d="M680 498C650 548 560 550 521 588" stroke="#CFF34E" stroke-width="2" marker-end="url(#arrowGreen)"/>
+    <path d="M760 498C790 548 820 550 831 588" stroke="#73798C" stroke-width="2" marker-end="url(#arrowMuted)"/>
+    <path d="M815 498C910 540 1120 540 1185 588" stroke="#73798C" stroke-width="2" stroke-dasharray="6 7" marker-end="url(#arrowMuted)"/>
+
+    <text x="64" y="782" fill="#666D80" font-size="11">Community intent → governed execution → transparent settlement</text>
+    <text x="1200" y="782" fill="#666D80" font-size="11">Ethereum · Sepolia</text>
+  </g>
+</svg>

@@ -60,31 +60,13 @@ The live application presents the complete protocol through six product areas:
 InkDAO separates governance, financial operations, identity, and application
 logic across six purpose-built contracts.
 
-```mermaid
-flowchart TB
-    U["Readers · Writers · Token Holders"]
-    G["Governor.sol<br/>Propose · Vote · Execute"]
-    T["Treasury.sol<br/>Payments · Prize Pools · Rewards"]
-    N["NovelToken.sol<br/>NVT Participation Token"]
-    M["Membership.sol<br/>Access Registry"]
-    R["RoleManager.sol<br/>Reader · Author · Admin"]
-    C["ContestManager.sol<br/>Submit · Vote · Finalize"]
-    O["Chainlink ETH/USD Oracle"]
-    A["Aave Treasury Research"]
+<p align="center">
+  <img src="./docs/architecture.svg" alt="InkDAO protocol architecture" width="100%" />
+</p>
 
-    U --> G
-    U --> T
-    U --> C
-    G --> T
-    G --> C
-    T --> N
-    T --> M
-    T --> R
-    C --> T
-    C --> N
-    T -. price data .-> O
-    T -. idle capital research .-> A
-```
+The diagram separates community intent, governed execution, capital movement,
+core protocol modules, and optional external infrastructure so each trust
+boundary remains visible.
 
 ### Smart contracts
 
