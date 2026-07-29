@@ -1,3 +1,5 @@
+<div align="center">
+
 # InkDAO
 
 ### Decentralized publishing and community governance on Ethereum
@@ -6,11 +8,13 @@ InkDAO is a full-stack FinTech and Web3 project for community-owned publishing.
 Writers submit work, readers curate with NVT, and DAO governance coordinates
 prize pools and Treasury execution through six modular smart contracts.
 
-**Live Demo:** [Open the InkDAO application](https://irenezhangtt.github.io/memeDAO/)
+[![Ethereum](https://img.shields.io/badge/Ethereum-Sepolia-627EEA?style=flat-square&logo=ethereum&logoColor=white)](https://sepolia.etherscan.io/)
+[![Solidity](https://img.shields.io/badge/Solidity-0.8.x-363636?style=flat-square&logo=solidity)](https://soliditylang.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=111111)](https://developer.mozilla.org/docs/Web/JavaScript)
 
-**Core Stack:** Ethereum Sepolia · Solidity 0.8.x · JavaScript ES6+ · React 18 · ethers.js 6
+**Live Demo:** [https://irenezhangtt.github.io/memeDAO/](https://irenezhangtt.github.io/memeDAO/)
 
-**Validated Scope:** 6 smart contracts · 3 participant roles · 11 gas benchmarks · end-to-end Sepolia workflow
+</div>
 
 ---
 
@@ -23,13 +27,13 @@ prize pools and Treasury execution through six modular smart contracts.
 - [Application guide](#application-guide)
 - [Protocol workflows](#protocol-workflows)
 - [Token and treasury model](#token--treasury-model)
-- [Getting started](#getting-started)
-- [Deployment](#deployment)
+- [Technology stack](#technology-stack)
 - [Testing and validation](#testing--validation)
 - [Security](#security)
 - [Roadmap](#roadmap)
 
-## Project overview
+<a id="project-overview"></a>
+## 📖 Project overview
 
 Traditional publishing platforms centralize discovery, ranking, monetization,
 and editorial control. InkDAO tests a different market structure:
@@ -53,7 +57,8 @@ Treasury and distributed through governed execution.
 > InkDAO is a research prototype deployed and tested on Ethereum Sepolia. It is
 > not a production financial product and its contracts have not been audited.
 
-## Core features
+<a id="core-features"></a>
+## ✨ Core features
 
 ### 1. Membership and identity
 
@@ -92,7 +97,8 @@ Treasury and distributed through governed execution.
 - Contract reads and transaction preparation through ethers.js
 - Dedicated views for membership, contests, governance, Treasury, and tests
 
-## System architecture
+<a id="system-architecture"></a>
+## 🏗️ System architecture
 
 InkDAO separates community access, governed execution, financial operations,
 and application logic across six purpose-built contracts.
@@ -128,7 +134,8 @@ and application logic across six purpose-built contracts.
   </tr>
 </table>
 
-## Smart contracts
+<a id="smart-contracts"></a>
+## 📜 Smart contracts
 
 ### Core contracts
 
@@ -151,7 +158,8 @@ and application logic across six purpose-built contracts.
 | Governance | `propose()`, `vote()`, `finalizeProposal()`, `execute()` |
 | Treasury research | `getEthUsdPrice()`, `supplyIdleEthToAave()` |
 
-## Application guide
+<a id="application-guide"></a>
+## 🖥️ Application guide
 
 The public interface is organized into six areas:
 
@@ -176,7 +184,8 @@ The current public build is suitable for demonstrating the complete product
 structure. Live contract writes require valid environment addresses and active
 Sepolia deployments.
 
-## Protocol workflows
+<a id="protocol-workflows"></a>
+## 🔄 Protocol workflows
 
 ### End-to-end publishing lifecycle
 
@@ -219,7 +228,8 @@ Proposal → Voting → Quorum check → Finalization → Execution
 5. Voting closes and the Top 3 are finalized.
 6. Governance authorizes the associated reward settlement.
 
-## Token & treasury model
+<a id="token--treasury-model"></a>
+## 💰 Token & treasury model
 
 ### NVT utility
 
@@ -252,43 +262,8 @@ Chainlink price data was used to research USD-denominated fee inputs. Aave was
 explored as an optional idle-Treasury strategy. Both integrations remain
 prototype research rather than production yield infrastructure.
 
-## Getting started
-
-### Prerequisites
-
-- Node.js 20 or newer
-- npm
-- MetaMask or another EIP-1193 wallet
-- Sepolia ETH for test transactions
-
-### Installation
-
-```bash
-git clone https://github.com/Irenezhangtt/memeDAO.git
-cd memeDAO
-npm install
-cp .env.example .env
-npm start
-```
-
-Open `http://localhost:3000`.
-
-### Environment configuration
-
-```env
-REACT_APP_CONTEST_MANAGER_ADDRESS=
-REACT_APP_MEMBERSHIP_ADDRESS=
-REACT_APP_NOVEL_TOKEN_ADDRESS=
-REACT_APP_ROLE_MANAGER_ADDRESS=
-REACT_APP_TREASURY_ADDRESS=
-REACT_APP_GOVERNOR_ADDRESS=
-```
-
-These values are public contract addresses. Never put a private key, seed
-phrase, privileged RPC secret, or deployer credential in a React environment
-variable.
-
-### Technology stack
+<a id="technology-stack"></a>
+## 🧰 Technology stack
 
 | Layer | Stack | Engineering role |
 |---|---|---|
@@ -301,31 +276,8 @@ variable.
 | **Content** | IPFS-compatible URIs | Content-addressed publication references |
 | **Hosting** | GitHub Pages | Public frontend delivery |
 
-## Deployment
-
-### Frontend build
-
-```bash
-npm run build
-```
-
-### GitHub Pages
-
-```bash
-npm run deploy:pages
-```
-
-### Contract deployment order
-
-1. Deploy `NovelToken`, `Membership`, and `RoleManager`.
-2. Deploy `ContestManager` and `Treasury` with their dependencies.
-3. Deploy `Governor`.
-4. Assign Treasury manager and token-minter permissions.
-5. Connect Governor, Treasury, and ContestManager.
-6. Record network-specific addresses in `.env`.
-7. Complete a multi-wallet test before publishing the addresses.
-
-## Testing & validation
+<a id="testing--validation"></a>
+## 🧪 Testing & validation
 
 The full workflow was exercised on Ethereum Sepolia with multiple wallets. The
 test covered deployment, permissions, membership, author registration,
@@ -380,7 +332,8 @@ not current testnet or mainnet cost estimates.
 These addresses are a public test archive and should not be assumed to remain
 active.
 
-## Security
+<a id="security"></a>
+## 🔐 Security
 
 InkDAO is research software. The contracts have **not** been independently
 audited and should not custody production funds.
@@ -399,7 +352,8 @@ Production hardening requires:
 
 See [`SECURITY.md`](./SECURITY.md) for the security policy.
 
-## Roadmap
+<a id="roadmap"></a>
+## 🗺️ Roadmap
 
 - [x] Six-contract modular protocol
 - [x] Membership and role-based participation
@@ -415,23 +369,7 @@ See [`SECURITY.md`](./SECURITY.md) for the security policy.
 - [ ] Multisig-controlled deployment
 - [ ] Independent security audit
 
-## Repository structure
-
-```text
-.
-├── contracts/          Solidity protocol contracts
-├── docs/               Architecture assets
-├── public/             Static web assets and social preview
-├── src/
-│   ├── abi/            Contract ABIs
-│   ├── components/     Product and Web3 interface components
-│   └── utils/          Contract clients and formatting helpers
-├── .env.example        Public contract-address template
-├── SECURITY.md         Security and disclosure guidance
-└── README.md           Protocol documentation
-```
-
-## Research team
+## Team
 
 InkDAO was created as a full-stack blockchain and cryptocurrency research
 project by **Jiaying Xie** and **Yutong Zhang**.
@@ -450,6 +388,6 @@ in permanent loss.
 **InkDAO — writers create, readers decide, the protocol settles.**
 
 [Launch App](https://irenezhangtt.github.io/memeDAO/) ·
-[View Source](https://github.com/Irenezhangtt/memeDAO)
+[View Source](https://github.com/Irenezhangtt/InkDAO)
 
 </div>
