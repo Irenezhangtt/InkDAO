@@ -12,7 +12,7 @@ prize pools and Treasury execution through six modular smart contracts.
 [![Solidity](https://img.shields.io/badge/Solidity-0.8.x-363636?style=flat-square&logo=solidity)](https://soliditylang.org/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=111111)](https://developer.mozilla.org/docs/Web/JavaScript)
 
-**Live Demo:** [https://irenezhangtt.github.io/memeDAO/](https://irenezhangtt.github.io/memeDAO/)
+**Live Demo:** [https://irenezhangtt.github.io/InkDAO/](https://irenezhangtt.github.io/InkDAO/)
 
 </div>
 
@@ -174,7 +174,7 @@ The public interface is organized into six areas:
 
 ### Quick interface flow
 
-1. Open the [InkDAO application](https://irenezhangtt.github.io/memeDAO/).
+1. Open the [InkDAO application](https://irenezhangtt.github.io/InkDAO/).
 2. Select **Connect Wallet**.
 3. Approve the MetaMask connection.
 4. Switch to Ethereum Sepolia when prompted.
@@ -387,7 +387,7 @@ in permanent loss.
 
 **InkDAO — writers create, readers decide, the protocol settles.**
 
-[Launch App](https://irenezhangtt.github.io/memeDAO/) ·
+[Launch App](https://irenezhangtt.github.io/InkDAO/) ·
 [View Source](https://github.com/Irenezhangtt/InkDAO)
 
 </div>

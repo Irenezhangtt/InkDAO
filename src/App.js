@@ -272,7 +272,7 @@ function Proof() {
         <div><span className="kicker">OBSERVED</span><h3>Execution costs most</h3><p>Governance execution reached 321,822 gas because it combines storage updates and external calls.</p></div>
         <div><span className="kicker">NEXT</span><h3>Production hardening</h3><p>ERC20Votes snapshots, Timelock execution, IPFS, optimized ranking, and an independent audit.</p></div>
       </section>
-      <a className="report-source" href="https://github.com/Irenezhangtt/memeDAO" target="_blank" rel="noreferrer">Explore the contracts and original test implementation on GitHub ↗</a>
+      <a className="report-source" href="https://github.com/Irenezhangtt/InkDAO" target="_blank" rel="noreferrer">Explore the contracts and original test implementation on GitHub ↗</a>
     </>
   );
 }
