@@ -2,219 +2,355 @@
 
 # InkDAO
 
-### Community-owned publishing infrastructure for the next generation of writers
+### A community-owned publishing protocol for writers and readers
 
 InkDAO combines programmable membership, tokenized curation, transparent prize
-pools, and on-chain governance in a modular Ethereum protocol.
+pools, and on-chain governance in a modular Ethereum application.
 
-[![Live App](https://img.shields.io/badge/Live_App-Open_InkDAO-171816?style=for-the-badge)](https://irenezhangtt.github.io/memeDAO/)
-[![Network](https://img.shields.io/badge/Network-Ethereum_Sepolia-5057D9?style=for-the-badge&logo=ethereum&logoColor=white)](https://sepolia.etherscan.io/)
+[![Live App](https://img.shields.io/badge/Live_App-Launch-171816?style=for-the-badge)](https://irenezhangtt.github.io/memeDAO/)
+[![Network](https://img.shields.io/badge/Network-Sepolia-5057D9?style=for-the-badge&logo=ethereum&logoColor=white)](https://sepolia.etherscan.io/)
 [![Solidity](https://img.shields.io/badge/Solidity-0.8.x-363636?style=for-the-badge&logo=solidity)](https://soliditylang.org/)
-[![React](https://img.shields.io/badge/Frontend-React-20232A?style=for-the-badge&logo=react)](https://react.dev/)
+[![React](https://img.shields.io/badge/Frontend-React_18-20232A?style=for-the-badge&logo=react)](https://react.dev/)
 
 <br />
 
 <table>
   <tr>
-    <td align="center" width="104">
-      <img src="https://cdn.simpleicons.org/ethereum/627EEA" width="32" height="32" alt="Ethereum" /><br />
-      <sub><b>Ethereum</b></sub>
-    </td>
-    <td align="center" width="104">
-      <img src="https://cdn.simpleicons.org/solidity/8C8C8C" width="32" height="32" alt="Solidity" /><br />
-      <sub><b>Solidity</b></sub>
-    </td>
-    <td align="center" width="104">
-      <img src="https://cdn.simpleicons.org/openzeppelin/4E5EE4" width="32" height="32" alt="OpenZeppelin" /><br />
-      <sub><b>OpenZeppelin</b></sub>
-    </td>
-    <td align="center" width="104">
-      <img src="https://cdn.simpleicons.org/chainlink/375BD2" width="32" height="32" alt="Chainlink" /><br />
-      <sub><b>Chainlink</b></sub>
-    </td>
-    <td align="center" width="104">
-      <img src="https://cdn.simpleicons.org/aave/B6509E" width="32" height="32" alt="Aave" /><br />
-      <sub><b>Aave</b></sub>
-    </td>
-    <td align="center" width="104">
-      <img src="https://cdn.simpleicons.org/react/61DAFB" width="32" height="32" alt="React" /><br />
-      <sub><b>React</b></sub>
-    </td>
-    <td align="center" width="104">
-      <img src="https://cdn.simpleicons.org/ipfs/65C2CB" width="32" height="32" alt="IPFS" /><br />
-      <sub><b>IPFS</b></sub>
-    </td>
+    <td align="center" width="104"><img src="https://cdn.simpleicons.org/ethereum/627EEA" width="32" alt="Ethereum" /><br /><sub><b>Ethereum</b></sub></td>
+    <td align="center" width="104"><img src="https://cdn.simpleicons.org/solidity/8C8C8C" width="32" alt="Solidity" /><br /><sub><b>Solidity</b></sub></td>
+    <td align="center" width="104"><img src="https://cdn.simpleicons.org/openzeppelin/4E5EE4" width="32" alt="OpenZeppelin" /><br /><sub><b>OpenZeppelin</b></sub></td>
+    <td align="center" width="104"><img src="https://cdn.simpleicons.org/chainlink/375BD2" width="32" alt="Chainlink" /><br /><sub><b>Chainlink</b></sub></td>
+    <td align="center" width="104"><img src="https://cdn.simpleicons.org/aave/B6509E" width="32" alt="Aave" /><br /><sub><b>Aave</b></sub></td>
+    <td align="center" width="104"><img src="https://cdn.simpleicons.org/react/61DAFB" width="32" alt="React" /><br /><sub><b>React</b></sub></td>
+    <td align="center" width="104"><img src="https://cdn.simpleicons.org/ipfs/65C2CB" width="32" alt="IPFS" /><br /><sub><b>IPFS</b></sub></td>
   </tr>
 </table>
 
 [Launch App](https://irenezhangtt.github.io/memeDAO/) ·
-[Explore Contracts](./contracts) ·
-[Review Test Evidence](#protocol-validation) ·
-[Read the Roadmap](#roadmap)
+[Smart Contracts](./contracts) ·
+[Test Results](#-testing--validation) ·
+[Security](./SECURITY.md)
 
 </div>
 
 ---
 
-## The protocol
+## Table of contents
 
-Traditional publishing platforms concentrate discovery, ranking, monetization,
-and editorial control in a small number of intermediaries. InkDAO explores a
-different market structure: writers submit work, readers allocate attention and
-voting power, and the community governs how shared capital is distributed.
+- [Project overview](#-project-overview)
+- [Core features](#-core-features)
+- [System architecture](#-system-architecture)
+- [Smart contracts](#-smart-contracts)
+- [Application guide](#-application-guide)
+- [Protocol workflows](#-protocol-workflows)
+- [Token and treasury model](#-token--treasury-model)
+- [Getting started](#-getting-started)
+- [Deployment](#-deployment)
+- [Testing and validation](#-testing--validation)
+- [Security](#-security)
+- [Roadmap](#-roadmap)
 
-The protocol is designed around four financial and operational primitives:
+## ◈ Project overview
 
-| Primitive | Purpose |
-|---|---|
-| **Programmable membership** | Converts participation fees into access, roles, and NVT voting tokens |
-| **Tokenized curation** | Lets readers signal conviction through weighted, non-reusable contest votes |
-| **Transparent prize pools** | Accumulates membership and submission fees for governed creator rewards |
-| **On-chain governance** | Coordinates proposals, voting, parameter changes, and treasury execution |
+Traditional publishing platforms centralize discovery, ranking, monetization,
+and editorial control. InkDAO tests a different market structure:
 
-InkDAO is a research prototype for decentralized content markets. It demonstrates
-how smart contracts can align creator incentives, community participation, and
-treasury accountability without relying on advertising or opaque ranking
-algorithms.
+> **Writers create · Readers curate · The community governs · The protocol settles**
 
-## Technical differentiators
+Readers join the protocol and receive `NVT` participation tokens. Authors submit
+works to time-bound contests. Readers commit NVT to the entries they support,
+and the protocol finalizes the Top 3. Shared capital is held in a transparent
+Treasury and distributed through governed execution.
 
-<table>
-  <tr>
-    <td width="33%" valign="top">
-      <img src="https://cdn.simpleicons.org/solidity/8C8C8C" width="26" alt="" />
-      <br /><b>Modular contract composition</b>
-      <br /><sub>Six purpose-built contracts isolate identity, curation, governance, and capital operations into auditable trust boundaries.</sub>
-    </td>
-    <td width="33%" valign="top">
-      <img src="https://cdn.simpleicons.org/ethereum/627EEA" width="26" alt="" />
-      <br /><b>Burn-to-vote curation</b>
-      <br /><sub>NVT is consumed when a contest vote is committed, preventing recycled voting power and making conviction economically legible.</sub>
-    </td>
-    <td width="33%" valign="top">
-      <img src="https://cdn.simpleicons.org/openzeppelin/4E5EE4" width="26" alt="" />
-      <br /><b>Governed execution</b>
-      <br /><sub>Proposal thresholds, quorum, voting windows, and execution controls turn community decisions into traceable contract calls.</sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="33%" valign="top">
-      <img src="https://cdn.simpleicons.org/chainlink/375BD2" width="26" alt="" />
-      <br /><b>Oracle-denominated pricing</b>
-      <br /><sub>Chainlink ETH/USD research enables human-readable fee targets while settlement remains native to Ethereum.</sub>
-    </td>
-    <td width="33%" valign="top">
-      <img src="https://cdn.simpleicons.org/aave/B6509E" width="26" alt="" />
-      <br /><b>Programmable treasury</b>
-      <br /><sub>Governed prize pools, creator rewards, reserves, and optional DeFi routing make every capital movement inspectable.</sub>
-    </td>
-    <td width="33%" valign="top">
-      <img src="https://cdn.simpleicons.org/ipfs/65C2CB" width="26" alt="" />
-      <br /><b>Hybrid data architecture</b>
-      <br /><sub>Content is referenced through IPFS-compatible URIs while ownership, voting, rankings, and settlement stay on-chain.</sub>
-    </td>
-  </tr>
-</table>
+### At a glance
 
-## Product experience
+| Protocol primitive | What it does | Why it matters |
+|---|---|---|
+| **Programmable membership** | Converts participation fees into access, roles, and NVT | Creates a transparent onboarding path |
+| **Tokenized curation** | Uses weighted, non-reusable contest votes | Makes reader conviction measurable |
+| **Creator prize pools** | Accumulates membership and submission fees | Connects platform activity to creator rewards |
+| **DAO governance** | Coordinates proposals, voting, and execution | Makes treasury decisions publicly auditable |
 
-The live application presents the complete protocol through six product areas:
+> InkDAO is a research prototype deployed and tested on Ethereum Sepolia. It is
+> not a production financial product and its contracts have not been audited.
 
-- **Overview** — protocol thesis, metrics, active contest, and reader leaderboard
-- **Membership** — wallet onboarding and the reader-to-author participation path
-- **Novel Contest** — content discovery, IPFS-ready submissions, and NVT voting
-- **Governance** — proposal creation, voting, quorum checks, and execution
-- **Treasury** — revenue flows, prize pools, reserves, oracle, and DeFi research
-- **Test Report** — Sepolia workflow evidence, gas benchmarks, and key findings
+## ✦ Core features
 
-> [Open the public InkDAO application](https://irenezhangtt.github.io/memeDAO/)
+### 1. Membership and identity
 
-## System architecture
+- Reader onboarding through paid membership
+- Reader, author, and administrator roles
+- Controlled role grants and revocations
+- Wallet-native identity through an EIP-1193 provider
 
-InkDAO separates governance, financial operations, identity, and application
-logic across six purpose-built contracts.
+### 2. Novel contests
+
+- Time-bound writing competitions
+- Title and IPFS-compatible content URI submissions
+- NVT-weighted community voting
+- Deterministic Top 3 finalization
+- On-chain contest and submission records
+
+### 3. Governance
+
+- Proposal creation with configurable thresholds
+- Community voting with quorum checks
+- Proposal lifecycle and execution tracking
+- Governed calls into Treasury and ContestManager
+
+### 4. Treasury and rewards
+
+- Membership, token-purchase, and submission revenue
+- Transparent contest prize pools
+- Governed creator reward settlement
+- Platform reserve accounting
+- Chainlink pricing and Aave allocation research
+
+### 5. Full-stack Web3 interface
+
+- Responsive protocol dashboard
+- MetaMask connection and network detection
+- Contract reads and transaction preparation through ethers.js
+- Dedicated views for membership, contests, governance, Treasury, and tests
+
+## ⬡ System architecture
+
+InkDAO separates community access, governed execution, financial operations,
+and application logic across six purpose-built contracts.
 
 <p align="center">
   <img src="./docs/architecture.svg" alt="InkDAO protocol architecture" width="100%" />
 </p>
 
-The diagram separates community intent, governed execution, capital movement,
-core protocol modules, and optional external infrastructure so each trust
-boundary remains visible.
+### Component relationships
 
-### Smart contracts
-
-| Contract | Responsibility | Key controls |
+| From | Relationship | To |
 |---|---|---|
-| [`NovelToken.sol`](./contracts/NovelToken.sol) | ERC-20 participation and voting asset | Authorized minting, user burns |
-| [`Membership.sol`](./contracts/Membership.sol) | Paid membership registry | Authorized grant and revocation |
-| [`RoleManager.sol`](./contracts/RoleManager.sol) | Reader, author, and administrator permissions | Manager and owner controls |
-| [`ContestManager.sol`](./contracts/ContestManager.sol) | Contest lifecycle, submissions, voting, and Top 3 | Owner/Governor execution |
-| [`Treasury.sol`](./contracts/Treasury.sol) | Payments, pricing, prize pools, and rewards | Governor-controlled parameters |
-| [`Governor.sol`](./contracts/Governor.sol) | Proposal coordination and approved execution | Threshold, quorum, voting period |
+| Readers and writers | Join, submit, and commit NVT | Membership / ContestManager |
+| Community voters | Propose and vote | Governor |
+| Governor | Executes approved actions | ContestManager / Treasury |
+| Treasury | Mints participation assets and pays rewards | NovelToken / recipients |
+| Treasury | Reads reference price data | Chainlink ETH/USD |
+| Treasury | Explores governed idle-capital routing | Aave |
+| Frontend | Reads state and prepares transactions | All protocol contracts |
 
-## Economic model
+### Technical differentiators
 
-InkDAO models a circular creator economy:
+<table>
+  <tr>
+    <td width="33%" valign="top"><img src="https://cdn.simpleicons.org/solidity/8C8C8C" width="26" alt="" /><br /><b>Modular contracts</b><br /><sub>Identity, governance, curation, and capital operations remain separate and auditable.</sub></td>
+    <td width="33%" valign="top"><img src="https://cdn.simpleicons.org/ethereum/627EEA" width="26" alt="" /><br /><b>Burn-to-vote curation</b><br /><sub>Committed NVT cannot be recycled across contest votes, making conviction economically legible.</sub></td>
+    <td width="33%" valign="top"><img src="https://cdn.simpleicons.org/openzeppelin/4E5EE4" width="26" alt="" /><br /><b>Governed execution</b><br /><sub>Thresholds, quorum, voting windows, and execution connect decisions to traceable calls.</sub></td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top"><img src="https://cdn.simpleicons.org/chainlink/375BD2" width="26" alt="" /><br /><b>Oracle pricing</b><br /><sub>ETH/USD reference data supports human-readable fee targets with Ethereum settlement.</sub></td>
+    <td width="33%" valign="top"><img src="https://cdn.simpleicons.org/aave/B6509E" width="26" alt="" /><br /><b>Programmable Treasury</b><br /><sub>Prize pools, reserves, rewards, and optional DeFi routing are inspectable.</sub></td>
+    <td width="33%" valign="top"><img src="https://cdn.simpleicons.org/ipfs/65C2CB" width="26" alt="" /><br /><b>Hybrid data model</b><br /><sub>Content stays off-chain while roles, rankings, voting, and settlement remain on-chain.</sub></td>
+  </tr>
+</table>
+
+## ◫ Smart contracts
+
+### Core contracts
+
+| Contract | Purpose | Main capabilities |
+|---|---|---|
+| [`NovelToken.sol`](./contracts/NovelToken.sol) | ERC-20 participation asset | Authorized minting, approvals, transfers, user burns |
+| [`Membership.sol`](./contracts/Membership.sol) | Paid access registry | Membership checks, grants, revocations |
+| [`RoleManager.sol`](./contracts/RoleManager.sol) | Protocol identity | Reader, author, administrator permissions |
+| [`ContestManager.sol`](./contracts/ContestManager.sol) | Publishing competitions | Create, submit, vote, close, finalize Top 3 |
+| [`Treasury.sol`](./contracts/Treasury.sol) | Protocol finance | Payments, pricing, prize pools, rewards |
+| [`Governor.sol`](./contracts/Governor.sol) | DAO coordination | Propose, vote, quorum, finalize, execute |
+
+### Key contract calls
+
+| Flow | Functions |
+|---|---|
+| Onboarding | `purchaseMembership()`, `registerAsAuthor()` |
+| Participation | `buyExtraTokens()`, `approve()` |
+| Contest | `createContest()`, `submitNovel()`, `vote()`, `finalizeWinner()` |
+| Governance | `propose()`, `vote()`, `finalizeProposal()`, `execute()` |
+| Treasury research | `getEthUsdPrice()`, `supplyIdleEthToAave()` |
+
+## ◧ Application guide
+
+The public interface is organized into six areas:
+
+| Area | What users can do |
+|---|---|
+| **Overview** | Review protocol metrics, active contest, and reader leaderboard |
+| **Membership** | Connect a wallet and explore reader-to-author onboarding |
+| **Novel Contest** | Discover entries, submit work, and inspect NVT voting |
+| **Governance** | Review proposal creation, voting, quorum, and execution |
+| **Treasury** | Inspect revenue, prize pools, reserves, oracle, and DeFi research |
+| **Test Report** | Review Sepolia evidence, gas benchmarks, and findings |
+
+### Quick interface flow
+
+1. Open the [InkDAO application](https://irenezhangtt.github.io/memeDAO/).
+2. Select **Connect Wallet**.
+3. Approve the MetaMask connection.
+4. Switch to Ethereum Sepolia when prompted.
+5. Explore the six protocol areas from the main navigation.
+
+The current public build is suitable for demonstrating the complete product
+structure. Live contract writes require valid environment addresses and active
+Sepolia deployments.
+
+## ⇄ Protocol workflows
+
+### End-to-end publishing lifecycle
 
 ```text
-Membership + token purchases + submission fees
+Join InkDAO
+    ↓
+Receive NVT and reader access
+    ↓
+Register as an author
+    ↓
+Submit title + content URI
+    ↓
+Readers approve and commit NVT
+    ↓
+Contest closes and Top 3 finalize
+    ↓
+Governance approves distribution
+    ↓
+Treasury settles creator rewards
+```
+
+### Governance lifecycle
+
+```text
+Proposal → Voting → Quorum check → Finalization → Execution
+```
+
+1. An eligible participant submits a proposal and encoded target call.
+2. Community members vote during the configured voting window.
+3. The Governor checks support and quorum.
+4. A successful proposal is finalized.
+5. The approved action executes against Treasury or ContestManager.
+
+### Contest lifecycle
+
+1. Create a time-bound contest.
+2. Authors submit a title and off-chain content reference.
+3. Readers approve NVT for the ContestManager.
+4. Readers commit weighted votes; committed NVT is burned.
+5. Voting closes and the Top 3 are finalized.
+6. Governance authorizes the associated reward settlement.
+
+## ◉ Token & treasury model
+
+### NVT utility
+
+`NVT` is the protocol participation token used for:
+
+- contest voting power;
+- governance participation;
+- auditable reader conviction;
+- burn-based contest voting that prevents token reuse.
+
+NVT does not represent equity, debt, ownership, profit rights, or a guaranteed
+financial return.
+
+### Capital flow
+
+```text
+Membership fees + NVT purchases + submission fees
                          │
                          ▼
-                DAO Treasury / Prize Pool
+                Treasury / Prize Pool
                          │
-                 community governance
+                  DAO governance
                          │
               ┌──────────┴──────────┐
               ▼                     ▼
        Top-three writers      Protocol reserve
 ```
 
-### NVT utility
+Chainlink price data was used to research USD-denominated fee inputs. Aave was
+explored as an optional idle-Treasury strategy. Both integrations remain
+prototype research rather than production yield infrastructure.
 
-`NVT` is the protocol's participation token. In the tested model it provides:
+## ▶ Getting started
 
-- contest voting power;
-- governance proposal and voting power;
-- an auditable participation mechanism;
-- a burn-based contest vote that prevents the same tokens from being reused.
+### Prerequisites
 
-NVT is an experimental protocol token, not a representation of equity, debt,
-profit rights, or a guaranteed financial return.
+- Node.js 20 or newer
+- npm
+- MetaMask or another EIP-1193 wallet
+- Sepolia ETH for test transactions
 
-### Revenue and capital flows
+### Installation
 
-- Membership payments onboard new readers and contribute to contest capital.
-- Optional token purchases expand a member's participation capacity.
-- Submission fees align creators with the active contest prize pool.
-- Governed distributions reward the Top 3 submissions.
-- A platform reserve supports continued protocol operation.
-- Chainlink price data was used to research stable USD-denominated fee inputs.
-- Aave integration was explored as an optional idle-treasury strategy.
+```bash
+git clone https://github.com/Irenezhangtt/memeDAO.git
+cd memeDAO
+npm install
+cp .env.example .env
+npm start
+```
 
-Oracle and lending components are prototype research and are not presented as
-production yield products.
+Open `http://localhost:3000`.
 
-## End-to-end lifecycle
+### Environment configuration
 
-1. Deploy the six contracts in dependency order.
-2. Assign Treasury manager and token-minter permissions.
-3. Connect Governor, Treasury, and ContestManager.
-4. Create a time-bound writing contest.
-5. Purchase membership and receive NVT.
-6. Register a member as an author.
-7. Submit a title and off-chain content URI.
-8. Approve and commit NVT to a contest vote.
-9. Close voting and finalize the Top 3 submissions.
-10. Propose and approve reward distribution through governance.
-11. Execute the proposal and settle author rewards.
+```env
+REACT_APP_CONTEST_MANAGER_ADDRESS=
+REACT_APP_MEMBERSHIP_ADDRESS=
+REACT_APP_NOVEL_TOKEN_ADDRESS=
+REACT_APP_ROLE_MANAGER_ADDRESS=
+REACT_APP_TREASURY_ADDRESS=
+REACT_APP_GOVERNOR_ADDRESS=
+```
 
-## Protocol validation
+These values are public contract addresses. Never put a private key, seed
+phrase, privileged RPC secret, or deployer credential in a React environment
+variable.
 
-The complete workflow was deployed and exercised on Ethereum Sepolia with
-multiple wallets. The test sequence covered contract deployment, permission
-configuration, onboarding, submissions, token approvals, voting, winner
-selection, governance, and reward settlement.
+### Technology stack
+
+| Layer | Stack | Engineering role |
+|---|---|---|
+| **Settlement** | Ethereum / Sepolia | Immutable state and transaction settlement |
+| **Contracts** | Solidity, OpenZeppelin | Protocol logic and access control |
+| **Wallet** | MetaMask, EIP-1193 | Identity, signatures, transaction requests |
+| **Application** | React 18, ethers.js 6 | Responsive UI and contract interaction |
+| **Oracle research** | Chainlink ETH/USD | Reference pricing |
+| **Treasury research** | Aave | Optional governed capital routing |
+| **Content** | IPFS-compatible URIs | Content-addressed publication references |
+| **Hosting** | GitHub Pages | Public frontend delivery |
+
+## ↑ Deployment
+
+### Frontend build
+
+```bash
+npm run build
+```
+
+### GitHub Pages
+
+```bash
+npm run deploy:pages
+```
+
+### Contract deployment order
+
+1. Deploy `NovelToken`, `Membership`, and `RoleManager`.
+2. Deploy `ContestManager` and `Treasury` with their dependencies.
+3. Deploy `Governor`.
+4. Assign Treasury manager and token-minter permissions.
+5. Connect Governor, Treasury, and ContestManager.
+6. Record network-specific addresses in `.env`.
+7. Complete a multi-wallet test before publishing the addresses.
+
+## ✓ Testing & validation
+
+The full workflow was exercised on Ethereum Sepolia with multiple wallets. The
+test covered deployment, permissions, membership, author registration,
+submissions, approvals, voting, winner selection, governance, and rewards.
 
 ### Gas benchmarks
 
@@ -233,8 +369,7 @@ selection, governance, and reward settlement.
 | `execute()` | Governor | 321,822 |
 
 Governance execution was the most expensive measured operation because it
-combines state changes with an external contract call. Submission, lending, and
-proposal creation were the next most computationally intensive flows.
+combines state changes with an external contract call.
 
 ### Observed Sepolia fees
 
@@ -249,11 +384,10 @@ proposal creation were the next most computationally intensive flows.
 | Vote on reward distribution | 0.00014152 ETH |
 | Execute reward distribution | 0.00048273 ETH |
 
-Sepolia ETH has no production value. These figures document historical test
-execution and should not be treated as estimates of current testnet or mainnet
-costs.
+Sepolia ETH has no production value. These are historical test observations,
+not current testnet or mainnet cost estimates.
 
-## Sepolia contract archive
+### Sepolia contract archive
 
 | Contract | Address |
 |---|---|
@@ -264,137 +398,71 @@ costs.
 | Treasury | [`0xcD3f...5dA8`](https://sepolia.etherscan.io/address/0xcD3f2f5438562735a792d17Fe1bD8205963D5dA8) |
 | Governor | [`0xeB9A...9895`](https://sepolia.etherscan.io/address/0xeB9Af9D5A924d9F90D424832C6F0783C82a69895) |
 
-These addresses are retained as a public test archive. New deployments should
-use environment-specific addresses rather than assuming that archived contracts
-remain active.
+These addresses are a public test archive and should not be assumed to remain
+active.
 
-## Technology
+## ⚠ Security
 
-| | Layer | Stack | Engineering role |
-|---|---|---|---|
-| <img src="https://cdn.simpleicons.org/ethereum/627EEA" width="20" alt="Ethereum" /> | **Settlement** | Ethereum / Sepolia | Immutable protocol state and transaction settlement |
-| <img src="https://cdn.simpleicons.org/solidity/8C8C8C" width="20" alt="Solidity" /> | **Smart contracts** | Solidity, OpenZeppelin | Modular business logic and access controls |
-| <img src="https://cdn.simpleicons.org/metamask/F6851B" width="20" alt="MetaMask" /> | **Wallet interface** | MetaMask, EIP-1193 | User identity, signatures, and transaction requests |
-| <img src="https://cdn.simpleicons.org/react/61DAFB" width="20" alt="React" /> | **Application** | React 18, ethers.js 6 | Responsive protocol interface and chain reads |
-| <img src="https://cdn.simpleicons.org/chainlink/375BD2" width="20" alt="Chainlink" /> | **Oracle research** | Chainlink ETH/USD | Reference pricing for USD-denominated fee models |
-| <img src="https://cdn.simpleicons.org/aave/B6509E" width="20" alt="Aave" /> | **Treasury research** | Aave | Optional routing for governed idle capital |
-| <img src="https://cdn.simpleicons.org/ipfs/65C2CB" width="20" alt="IPFS" /> | **Content layer** | IPFS-compatible URIs | Decoupled, content-addressed publication references |
-| <img src="https://cdn.simpleicons.org/github/8B949E" width="20" alt="GitHub" /> | **Delivery** | GitHub Pages | Public, reproducible frontend distribution |
+InkDAO is research software. The contracts have **not** been independently
+audited and should not custody production funds.
 
-## Local development
+Production hardening requires:
 
-### Requirements
+- snapshot-based `ERC20Votes`;
+- Timelock-controlled execution;
+- multisig or governance control instead of broad owner privileges;
+- reentrancy protection and pull-based rewards where applicable;
+- Chainlink feed freshness and decimals validation;
+- strict caps and controls for external lending;
+- invariant, fuzz, access-control, and fork tests;
+- bounded or redesigned winner selection;
+- independent contract audit and legal review.
 
-- Node.js 20 or newer
-- npm
-- MetaMask or another EIP-1193 wallet
-- Sepolia ETH for test transactions
+See [`SECURITY.md`](./SECURITY.md) for the security policy.
 
-### Installation
+## ◇ Roadmap
 
-```bash
-git clone https://github.com/Irenezhangtt/memeDAO.git
-cd memeDAO
-npm install
-cp .env.example .env
-npm start
-```
-
-The application opens at `http://localhost:3000`.
-
-### Environment configuration
-
-```env
-REACT_APP_CONTEST_MANAGER_ADDRESS=
-REACT_APP_MEMBERSHIP_ADDRESS=
-REACT_APP_NOVEL_TOKEN_ADDRESS=
-REACT_APP_ROLE_MANAGER_ADDRESS=
-REACT_APP_TREASURY_ADDRESS=
-REACT_APP_GOVERNOR_ADDRESS=
-```
-
-Only public contract addresses belong in the frontend environment. Never place
-wallet private keys, seed phrases, RPC administrator secrets, or deployer
-credentials in a React environment variable.
-
-### Build and publish
-
-```bash
-npm run build
-npm run deploy:pages
-```
-
-## Security posture
-
-InkDAO is a research and demonstration project. The contracts have **not** been
-independently audited and should not custody production funds.
-
-Before a production deployment:
-
-- migrate governance voting power to snapshot-based `ERC20Votes`;
-- introduce Timelock-controlled execution;
-- replace broad owner privileges with governance or multisig controls;
-- add reentrancy protection and pull-based reward withdrawals where applicable;
-- validate Chainlink feed freshness, decimals, and network-specific addresses;
-- restrict and cap any external lending allocation;
-- add invariant, fuzz, access-control, and fork tests;
-- optimize winner selection to avoid unbounded on-chain iteration;
-- commission an independent smart-contract security audit;
-- complete jurisdiction-specific legal, consumer-protection, and token review.
-
-See [`SECURITY.md`](./SECURITY.md) for responsible disclosure guidance once a
-production security contact is established.
-
-## Roadmap
-
-- [x] Modular six-contract protocol
+- [x] Six-contract modular protocol
 - [x] Membership and role-based participation
-- [x] Token-weighted novel contests
-- [x] Top-three winner finalization
-- [x] Treasury-funded reward workflow
-- [x] DAO proposal, voting, and execution
+- [x] Token-weighted novel contests and Top 3 finalization
+- [x] Treasury-funded rewards and DAO execution
 - [x] Sepolia multi-wallet validation
-- [x] Chainlink price conversion research
-- [x] Aave treasury integration research
-- [x] Public responsive web application
+- [x] Chainlink and Aave integration research
+- [x] Public responsive Web3 application
 - [ ] ERC20Votes and Timelock governance upgrade
-- [ ] IPFS upload and content retrieval
-- [ ] Automated Hardhat contract test suite
-- [ ] Gas regression and fork testing
-- [ ] Multisig-controlled deployment process
+- [ ] IPFS upload and retrieval
+- [ ] Automated Hardhat test suite
+- [ ] Gas regression, invariant, fuzz, and fork testing
+- [ ] Multisig-controlled deployment
 - [ ] Independent security audit
-- [ ] Production network evaluation
 
 ## Repository structure
 
 ```text
 .
 ├── contracts/          Solidity protocol contracts
+├── docs/               Architecture assets
 ├── public/             Static web assets and social preview
 ├── src/
 │   ├── abi/            Contract ABIs
 │   ├── components/     Product and Web3 interface components
 │   └── utils/          Contract clients and formatting helpers
-├── .env.example        Public address configuration template
+├── .env.example        Public contract-address template
+├── SECURITY.md         Security and disclosure guidance
 └── README.md           Protocol documentation
 ```
 
-## Research background
+## Research team
 
 InkDAO was created as a full-stack blockchain and cryptocurrency research
-project by Jiaying Xie and Yutong Zhang. The prototype investigated how a
-decentralized autonomous organization can coordinate creative discovery,
-community voting, programmable rewards, transparent treasury management, oracle
-pricing, and DeFi integrations in one coherent system.
+project by **Jiaying Xie** and **Yutong Zhang**.
 
 ## Disclaimer
 
-InkDAO is experimental software provided for research, education, and
-demonstration. It is not financial, investment, legal, or tax advice. NVT has no
-guaranteed value, return, liquidity, or redemption right. Smart-contract and
-blockchain interactions can result in permanent loss. Review the code, test on a
-supported testnet, and obtain independent professional advice before adapting
-the system for production use.
+InkDAO is experimental software for research, education, and demonstration. It
+is not financial, investment, legal, or tax advice. NVT has no guaranteed value,
+return, liquidity, or redemption right. Smart-contract interactions can result
+in permanent loss.
 
 ---
 
@@ -402,7 +470,7 @@ the system for production use.
 
 **InkDAO — writers create, readers decide, the protocol settles.**
 
-[Launch the app](https://irenezhangtt.github.io/memeDAO/) ·
-[View on GitHub](https://github.com/Irenezhangtt/memeDAO)
+[Launch App](https://irenezhangtt.github.io/memeDAO/) ·
+[View Source](https://github.com/Irenezhangtt/memeDAO)
 
 </div>
