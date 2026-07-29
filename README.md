@@ -1,68 +1,35 @@
-<div align="center">
-
 # InkDAO
 
-### Decentralized publishing, tokenized curation, and programmable creator rewards
+### Decentralized publishing and community governance on Ethereum
 
-InkDAO is a full-stack FinTech and Web3 application that turns publishing into
-a transparent community market. Writers submit work, readers curate with NVT,
-and DAO governance coordinates prize pools and Treasury execution on Ethereum.
+InkDAO is a full-stack FinTech and Web3 project for community-owned publishing.
+Writers submit work, readers curate with NVT, and DAO governance coordinates
+prize pools and Treasury execution through six modular smart contracts.
 
-<br />
+**Live Demo:** [Open the InkDAO application](https://irenezhangtt.github.io/memeDAO/)
 
-<table>
-  <tr>
-    <td align="center" width="230">
-      <sub><b>EXPLORE THE PROTOCOL</b></sub><br /><br />
-      <a href="https://irenezhangtt.github.io/memeDAO/">
-        <img src="https://img.shields.io/badge/LAUNCH_INKDAO-OPEN_APP-171816?style=for-the-badge" alt="Launch InkDAO" />
-      </a>
-    </td>
-    <td align="center" width="510">
-      <sub><b>CORE TECHNOLOGY</b></sub><br /><br />
-      <a href="https://sepolia.etherscan.io/"><img src="https://img.shields.io/badge/Ethereum-Sepolia-5057D9?style=flat-square&logo=ethereum&logoColor=white" alt="Ethereum Sepolia" /></a>
-      <a href="https://soliditylang.org/"><img src="https://img.shields.io/badge/Solidity-0.8.x-363636?style=flat-square&logo=solidity" alt="Solidity 0.8.x" /></a>
-      <a href="https://developer.mozilla.org/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=111111" alt="JavaScript ES6+" /></a>
-      <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-18-20232A?style=flat-square&logo=react" alt="React 18" /></a>
-      <img src="https://img.shields.io/badge/ethers.js-6-2535A0?style=flat-square" alt="ethers.js 6" />
-    </td>
-  </tr>
-</table>
+**Core Stack:** Ethereum Sepolia · Solidity 0.8.x · JavaScript ES6+ · React 18 · ethers.js 6
 
-<table>
-  <tr>
-    <td align="center" width="180"><strong>6</strong><br /><sub>SMART CONTRACTS</sub></td>
-    <td align="center" width="180"><strong>3</strong><br /><sub>PARTICIPANT ROLES</sub></td>
-    <td align="center" width="180"><strong>11</strong><br /><sub>GAS BENCHMARKS</sub></td>
-    <td align="center" width="180"><strong>SEPOLIA</strong><br /><sub>END-TO-END VALIDATED</sub></td>
-  </tr>
-</table>
-
-[Launch App](https://irenezhangtt.github.io/memeDAO/) ·
-[Smart Contracts](./contracts) ·
-[Test Results](#-testing--validation) ·
-[Security](./SECURITY.md)
-
-</div>
+**Validated Scope:** 6 smart contracts · 3 participant roles · 11 gas benchmarks · end-to-end Sepolia workflow
 
 ---
 
 ## Table of contents
 
-- [Project overview](#-project-overview)
-- [Core features](#-core-features)
-- [System architecture](#-system-architecture)
-- [Smart contracts](#-smart-contracts)
-- [Application guide](#-application-guide)
-- [Protocol workflows](#-protocol-workflows)
-- [Token and treasury model](#-token--treasury-model)
-- [Getting started](#-getting-started)
-- [Deployment](#-deployment)
-- [Testing and validation](#-testing--validation)
-- [Security](#-security)
-- [Roadmap](#-roadmap)
+- [Project overview](#project-overview)
+- [Core features](#core-features)
+- [System architecture](#system-architecture)
+- [Smart contracts](#smart-contracts)
+- [Application guide](#application-guide)
+- [Protocol workflows](#protocol-workflows)
+- [Token and treasury model](#token--treasury-model)
+- [Getting started](#getting-started)
+- [Deployment](#deployment)
+- [Testing and validation](#testing--validation)
+- [Security](#security)
+- [Roadmap](#roadmap)
 
-## ◈ Project overview
+## Project overview
 
 Traditional publishing platforms centralize discovery, ranking, monetization,
 and editorial control. InkDAO tests a different market structure:
@@ -86,7 +53,7 @@ Treasury and distributed through governed execution.
 > InkDAO is a research prototype deployed and tested on Ethereum Sepolia. It is
 > not a production financial product and its contracts have not been audited.
 
-## ✦ Core features
+## Core features
 
 ### 1. Membership and identity
 
@@ -125,7 +92,7 @@ Treasury and distributed through governed execution.
 - Contract reads and transaction preparation through ethers.js
 - Dedicated views for membership, contests, governance, Treasury, and tests
 
-## ⬡ System architecture
+## System architecture
 
 InkDAO separates community access, governed execution, financial operations,
 and application logic across six purpose-built contracts.
@@ -161,7 +128,7 @@ and application logic across six purpose-built contracts.
   </tr>
 </table>
 
-## ◫ Smart contracts
+## Smart contracts
 
 ### Core contracts
 
@@ -184,7 +151,7 @@ and application logic across six purpose-built contracts.
 | Governance | `propose()`, `vote()`, `finalizeProposal()`, `execute()` |
 | Treasury research | `getEthUsdPrice()`, `supplyIdleEthToAave()` |
 
-## ◧ Application guide
+## Application guide
 
 The public interface is organized into six areas:
 
@@ -209,7 +176,7 @@ The current public build is suitable for demonstrating the complete product
 structure. Live contract writes require valid environment addresses and active
 Sepolia deployments.
 
-## ⇄ Protocol workflows
+## Protocol workflows
 
 ### End-to-end publishing lifecycle
 
@@ -252,7 +219,7 @@ Proposal → Voting → Quorum check → Finalization → Execution
 5. Voting closes and the Top 3 are finalized.
 6. Governance authorizes the associated reward settlement.
 
-## ◉ Token & treasury model
+## Token & treasury model
 
 ### NVT utility
 
@@ -285,7 +252,7 @@ Chainlink price data was used to research USD-denominated fee inputs. Aave was
 explored as an optional idle-Treasury strategy. Both integrations remain
 prototype research rather than production yield infrastructure.
 
-## ▶ Getting started
+## Getting started
 
 ### Prerequisites
 
@@ -334,7 +301,7 @@ variable.
 | **Content** | IPFS-compatible URIs | Content-addressed publication references |
 | **Hosting** | GitHub Pages | Public frontend delivery |
 
-## ↑ Deployment
+## Deployment
 
 ### Frontend build
 
@@ -358,7 +325,7 @@ npm run deploy:pages
 6. Record network-specific addresses in `.env`.
 7. Complete a multi-wallet test before publishing the addresses.
 
-## ✓ Testing & validation
+## Testing & validation
 
 The full workflow was exercised on Ethereum Sepolia with multiple wallets. The
 test covered deployment, permissions, membership, author registration,
@@ -413,7 +380,7 @@ not current testnet or mainnet cost estimates.
 These addresses are a public test archive and should not be assumed to remain
 active.
 
-## ⚠ Security
+## Security
 
 InkDAO is research software. The contracts have **not** been independently
 audited and should not custody production funds.
@@ -432,7 +399,7 @@ Production hardening requires:
 
 See [`SECURITY.md`](./SECURITY.md) for the security policy.
 
-## ◇ Roadmap
+## Roadmap
 
 - [x] Six-contract modular protocol
 - [x] Membership and role-based participation
