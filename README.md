@@ -2,27 +2,26 @@
 
 # InkDAO
 
-### A community-owned publishing protocol for writers and readers
+### Decentralized publishing, tokenized curation, and programmable creator rewards
 
-InkDAO combines programmable membership, tokenized curation, transparent prize
-pools, and on-chain governance in a modular Ethereum application.
+InkDAO is a full-stack FinTech and Web3 application that turns publishing into
+a transparent community market. Writers submit work, readers curate with NVT,
+and DAO governance coordinates prize pools and Treasury execution on Ethereum.
 
 [![Live App](https://img.shields.io/badge/Live_App-Launch-171816?style=for-the-badge)](https://irenezhangtt.github.io/memeDAO/)
 [![Network](https://img.shields.io/badge/Network-Sepolia-5057D9?style=for-the-badge&logo=ethereum&logoColor=white)](https://sepolia.etherscan.io/)
 [![Solidity](https://img.shields.io/badge/Solidity-0.8.x-363636?style=for-the-badge&logo=solidity)](https://soliditylang.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=111111)](https://developer.mozilla.org/docs/Web/JavaScript)
 [![React](https://img.shields.io/badge/Frontend-React_18-20232A?style=for-the-badge&logo=react)](https://react.dev/)
 
 <br />
 
 <table>
   <tr>
-    <td align="center" width="104"><img src="https://cdn.simpleicons.org/ethereum/627EEA" width="32" alt="Ethereum" /><br /><sub><b>Ethereum</b></sub></td>
-    <td align="center" width="104"><img src="https://cdn.simpleicons.org/solidity/8C8C8C" width="32" alt="Solidity" /><br /><sub><b>Solidity</b></sub></td>
-    <td align="center" width="104"><img src="https://cdn.simpleicons.org/openzeppelin/4E5EE4" width="32" alt="OpenZeppelin" /><br /><sub><b>OpenZeppelin</b></sub></td>
-    <td align="center" width="104"><img src="https://cdn.simpleicons.org/chainlink/375BD2" width="32" alt="Chainlink" /><br /><sub><b>Chainlink</b></sub></td>
-    <td align="center" width="104"><img src="https://cdn.simpleicons.org/aave/B6509E" width="32" alt="Aave" /><br /><sub><b>Aave</b></sub></td>
-    <td align="center" width="104"><img src="https://cdn.simpleicons.org/react/61DAFB" width="32" alt="React" /><br /><sub><b>React</b></sub></td>
-    <td align="center" width="104"><img src="https://cdn.simpleicons.org/ipfs/65C2CB" width="32" alt="IPFS" /><br /><sub><b>IPFS</b></sub></td>
+    <td align="center" width="180"><strong>6</strong><br /><sub>SMART CONTRACTS</sub></td>
+    <td align="center" width="180"><strong>3</strong><br /><sub>PARTICIPANT ROLES</sub></td>
+    <td align="center" width="180"><strong>11</strong><br /><sub>GAS BENCHMARKS</sub></td>
+    <td align="center" width="180"><strong>SEPOLIA</strong><br /><sub>END-TO-END VALIDATED</sub></td>
   </tr>
 </table>
 
@@ -138,14 +137,14 @@ and application logic across six purpose-built contracts.
 
 <table>
   <tr>
-    <td width="33%" valign="top"><img src="https://cdn.simpleicons.org/solidity/8C8C8C" width="26" alt="" /><br /><b>Modular contracts</b><br /><sub>Identity, governance, curation, and capital operations remain separate and auditable.</sub></td>
-    <td width="33%" valign="top"><img src="https://cdn.simpleicons.org/ethereum/627EEA" width="26" alt="" /><br /><b>Burn-to-vote curation</b><br /><sub>Committed NVT cannot be recycled across contest votes, making conviction economically legible.</sub></td>
-    <td width="33%" valign="top"><img src="https://cdn.simpleicons.org/openzeppelin/4E5EE4" width="26" alt="" /><br /><b>Governed execution</b><br /><sub>Thresholds, quorum, voting windows, and execution connect decisions to traceable calls.</sub></td>
+    <td width="33%" valign="top"><b>01 · Modular contracts</b><br /><sub>Identity, governance, curation, and capital operations remain separate and auditable.</sub></td>
+    <td width="33%" valign="top"><b>02 · Burn-to-vote curation</b><br /><sub>Committed NVT cannot be recycled across contest votes, making conviction economically legible.</sub></td>
+    <td width="33%" valign="top"><b>03 · Governed execution</b><br /><sub>Thresholds, quorum, voting windows, and execution connect decisions to traceable calls.</sub></td>
   </tr>
   <tr>
-    <td width="33%" valign="top"><img src="https://cdn.simpleicons.org/chainlink/375BD2" width="26" alt="" /><br /><b>Oracle pricing</b><br /><sub>ETH/USD reference data supports human-readable fee targets with Ethereum settlement.</sub></td>
-    <td width="33%" valign="top"><img src="https://cdn.simpleicons.org/aave/B6509E" width="26" alt="" /><br /><b>Programmable Treasury</b><br /><sub>Prize pools, reserves, rewards, and optional DeFi routing are inspectable.</sub></td>
-    <td width="33%" valign="top"><img src="https://cdn.simpleicons.org/ipfs/65C2CB" width="26" alt="" /><br /><b>Hybrid data model</b><br /><sub>Content stays off-chain while roles, rankings, voting, and settlement remain on-chain.</sub></td>
+    <td width="33%" valign="top"><b>04 · Oracle pricing</b><br /><sub>ETH/USD reference data supports human-readable fee targets with Ethereum settlement.</sub></td>
+    <td width="33%" valign="top"><b>05 · Programmable Treasury</b><br /><sub>Prize pools, reserves, rewards, and optional DeFi routing are inspectable.</sub></td>
+    <td width="33%" valign="top"><b>06 · Hybrid data model</b><br /><sub>Content stays off-chain while roles, rankings, voting, and settlement remain on-chain.</sub></td>
   </tr>
 </table>
 
@@ -316,7 +315,7 @@ variable.
 | **Settlement** | Ethereum / Sepolia | Immutable state and transaction settlement |
 | **Contracts** | Solidity, OpenZeppelin | Protocol logic and access control |
 | **Wallet** | MetaMask, EIP-1193 | Identity, signatures, transaction requests |
-| **Application** | React 18, ethers.js 6 | Responsive UI and contract interaction |
+| **Application** | JavaScript ES6+, React 18, ethers.js 6 | Responsive UI and contract interaction |
 | **Oracle research** | Chainlink ETH/USD | Reference pricing |
 | **Treasury research** | Aave | Optional governed capital routing |
 | **Content** | IPFS-compatible URIs | Content-addressed publication references |
