@@ -12,6 +12,41 @@ pools, and on-chain governance in a modular Ethereum protocol.
 [![Solidity](https://img.shields.io/badge/Solidity-0.8.x-363636?style=for-the-badge&logo=solidity)](https://soliditylang.org/)
 [![React](https://img.shields.io/badge/Frontend-React-20232A?style=for-the-badge&logo=react)](https://react.dev/)
 
+<br />
+
+<table>
+  <tr>
+    <td align="center" width="104">
+      <img src="https://cdn.simpleicons.org/ethereum/627EEA" width="32" height="32" alt="Ethereum" /><br />
+      <sub><b>Ethereum</b></sub>
+    </td>
+    <td align="center" width="104">
+      <img src="https://cdn.simpleicons.org/solidity/8C8C8C" width="32" height="32" alt="Solidity" /><br />
+      <sub><b>Solidity</b></sub>
+    </td>
+    <td align="center" width="104">
+      <img src="https://cdn.simpleicons.org/openzeppelin/4E5EE4" width="32" height="32" alt="OpenZeppelin" /><br />
+      <sub><b>OpenZeppelin</b></sub>
+    </td>
+    <td align="center" width="104">
+      <img src="https://cdn.simpleicons.org/chainlink/375BD2" width="32" height="32" alt="Chainlink" /><br />
+      <sub><b>Chainlink</b></sub>
+    </td>
+    <td align="center" width="104">
+      <img src="https://cdn.simpleicons.org/aave/B6509E" width="32" height="32" alt="Aave" /><br />
+      <sub><b>Aave</b></sub>
+    </td>
+    <td align="center" width="104">
+      <img src="https://cdn.simpleicons.org/react/61DAFB" width="32" height="32" alt="React" /><br />
+      <sub><b>React</b></sub>
+    </td>
+    <td align="center" width="104">
+      <img src="https://cdn.simpleicons.org/ipfs/65C2CB" width="32" height="32" alt="IPFS" /><br />
+      <sub><b>IPFS</b></sub>
+    </td>
+  </tr>
+</table>
+
 [Launch App](https://irenezhangtt.github.io/memeDAO/) ·
 [Explore Contracts](./contracts) ·
 [Review Test Evidence](#protocol-validation) ·
@@ -41,6 +76,45 @@ InkDAO is a research prototype for decentralized content markets. It demonstrate
 how smart contracts can align creator incentives, community participation, and
 treasury accountability without relying on advertising or opaque ranking
 algorithms.
+
+## Technical differentiators
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <img src="https://cdn.simpleicons.org/solidity/8C8C8C" width="26" alt="" />
+      <br /><b>Modular contract composition</b>
+      <br /><sub>Six purpose-built contracts isolate identity, curation, governance, and capital operations into auditable trust boundaries.</sub>
+    </td>
+    <td width="33%" valign="top">
+      <img src="https://cdn.simpleicons.org/ethereum/627EEA" width="26" alt="" />
+      <br /><b>Burn-to-vote curation</b>
+      <br /><sub>NVT is consumed when a contest vote is committed, preventing recycled voting power and making conviction economically legible.</sub>
+    </td>
+    <td width="33%" valign="top">
+      <img src="https://cdn.simpleicons.org/openzeppelin/4E5EE4" width="26" alt="" />
+      <br /><b>Governed execution</b>
+      <br /><sub>Proposal thresholds, quorum, voting windows, and execution controls turn community decisions into traceable contract calls.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top">
+      <img src="https://cdn.simpleicons.org/chainlink/375BD2" width="26" alt="" />
+      <br /><b>Oracle-denominated pricing</b>
+      <br /><sub>Chainlink ETH/USD research enables human-readable fee targets while settlement remains native to Ethereum.</sub>
+    </td>
+    <td width="33%" valign="top">
+      <img src="https://cdn.simpleicons.org/aave/B6509E" width="26" alt="" />
+      <br /><b>Programmable treasury</b>
+      <br /><sub>Governed prize pools, creator rewards, reserves, and optional DeFi routing make every capital movement inspectable.</sub>
+    </td>
+    <td width="33%" valign="top">
+      <img src="https://cdn.simpleicons.org/ipfs/65C2CB" width="26" alt="" />
+      <br /><b>Hybrid data architecture</b>
+      <br /><sub>Content is referenced through IPFS-compatible URIs while ownership, voting, rankings, and settlement stay on-chain.</sub>
+    </td>
+  </tr>
+</table>
 
 ## Product experience
 
@@ -196,17 +270,16 @@ remain active.
 
 ## Technology
 
-| Layer | Stack |
-|---|---|
-| Blockchain | Ethereum / Sepolia |
-| Smart contracts | Solidity, OpenZeppelin |
-| Wallet interface | MetaMask, EIP-1193 |
-| Frontend | React 18 |
-| Web3 client | ethers.js 6 |
-| Oracle research | Chainlink ETH/USD |
-| Treasury research | Aave |
-| Content storage model | IPFS-compatible URI references |
-| Public hosting | GitHub Pages |
+| | Layer | Stack | Engineering role |
+|---|---|---|---|
+| <img src="https://cdn.simpleicons.org/ethereum/627EEA" width="20" alt="Ethereum" /> | **Settlement** | Ethereum / Sepolia | Immutable protocol state and transaction settlement |
+| <img src="https://cdn.simpleicons.org/solidity/8C8C8C" width="20" alt="Solidity" /> | **Smart contracts** | Solidity, OpenZeppelin | Modular business logic and access controls |
+| <img src="https://cdn.simpleicons.org/metamask/F6851B" width="20" alt="MetaMask" /> | **Wallet interface** | MetaMask, EIP-1193 | User identity, signatures, and transaction requests |
+| <img src="https://cdn.simpleicons.org/react/61DAFB" width="20" alt="React" /> | **Application** | React 18, ethers.js 6 | Responsive protocol interface and chain reads |
+| <img src="https://cdn.simpleicons.org/chainlink/375BD2" width="20" alt="Chainlink" /> | **Oracle research** | Chainlink ETH/USD | Reference pricing for USD-denominated fee models |
+| <img src="https://cdn.simpleicons.org/aave/B6509E" width="20" alt="Aave" /> | **Treasury research** | Aave | Optional routing for governed idle capital |
+| <img src="https://cdn.simpleicons.org/ipfs/65C2CB" width="20" alt="IPFS" /> | **Content layer** | IPFS-compatible URIs | Decoupled, content-addressed publication references |
+| <img src="https://cdn.simpleicons.org/github/8B949E" width="20" alt="GitHub" /> | **Delivery** | GitHub Pages | Public, reproducible frontend distribution |
 
 ## Local development
 
